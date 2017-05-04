@@ -1,0 +1,122 @@
+void setup(){
+ size(400,400);
+ background(255);
+}
+
+void draw(){
+  background(255);
+  head();
+  body();
+}
+
+void head(){
+  beginShape();
+  strokeWeight(5);
+  strokeCap(ROUND);
+  strokeJoin(ROUND);
+  vertex(140,50);
+  vertex(140,115);
+  vertex(260,115);
+  vertex(260,50);
+  vertex(140,50);
+  stroke(100);
+  fill(66, 164, 244);
+  endShape();
+  
+  //Head Rivets
+  beginShape();
+  noStroke();
+  fill(100);
+  rivet(150,60);
+  rivet(150,105);
+  rivet(250,105);
+  rivet(250,60);
+  endShape();
+  
+  //Antenna
+  fill(66, 164, 244);
+  strokeWeight(2);
+  stroke(100);
+  triangle(190,48,210,48,200,20);
+  
+  //Antenna Top
+  fill(65, 244, 244);
+  ellipse(200,12,17,17);
+  
+  //Eye 1
+  beginShape();
+  stroke(0);
+  strokeWeight(1);
+  fill(255);
+  ellipse(178,75,18,27);
+  fill(0);
+  ellipse(178,77,10,10);
+  endShape();
+  
+  //Eye 2
+  beginShape();
+  stroke(0);
+  strokeWeight(1);
+  fill(255);
+  ellipse(223,75,18,27);
+  fill(0);
+  ellipse(223,77,10,10);
+  endShape();
+  
+  //Mouth
+  fill(255);
+  bezier(170,92,170,107,231,107,231,92);
+  line(170,92,231,92);
+  line(180,92,180,99);
+  line(190,92,190,102);
+  line(200,92,200,103);
+  line(210,92,210,102);
+  line(220,92,220,100);
+  
+  
+}
+
+void body(){
+  //Neck
+  beginShape();
+  fill(66, 164, 244);
+  bezier(190,140,185,110,215,110,210,140);
+  line(190,140,210,140);
+  endShape();
+  
+  //Main Body
+  
+  beginShape();
+  strokeWeight(5);
+  strokeCap(ROUND);
+  strokeJoin(ROUND);
+  vertex(150,140);
+  vertex(170,270);
+  vertex(230,270);
+  vertex(250,140);
+  vertex(150,140);
+  stroke(100);
+  fill(66, 164, 244);
+  endShape();
+  
+  //Body Infill
+  beginShape();
+  noStroke();
+  vertex(160,150);
+  vertex(180,260);
+  vertex(220,260);
+  vertex(240,150);
+  vertex(160,150);
+  fill(56, 175, 161);
+  endShape();
+  
+  //Rivets
+  fill(100);
+  rivet(167,157);
+  rivet(187,254);
+  
+}
+
+void rivet(int x,int y){
+  ellipse(x,y,3,3);
+}
