@@ -7,6 +7,7 @@ void draw(){
   background(255);
   head();
   body();
+  panel();
 }
 
 void head(){
@@ -74,6 +75,45 @@ void head(){
   line(220,92,220,100);
   
   
+}
+
+void panel(){
+  stroke(0);
+  strokeWeight(2);
+  beginShape();
+  //fill(255);
+  vertex(170,160);
+  vertex(230,160);
+  vertex(220,210);
+  vertex(180,210);
+  vertex(170,160);
+  endShape();
+  strokeWeight(1);
+  fill(50, 229, 65);
+  ellipse(205,170,7,7);
+  fill(239, 27, 16);
+  ellipse(216,170,7,7);
+  
+  noFill();
+  strokeWeight(2);
+  stroke(30, 83, 216);
+  bezier(188, 177, 173, 195, 202, 190, 188, 202);
+  stroke(228, 234, 37);
+  bezier(204, 177, 190, 195, 208, 190, 204, 202);
+  stroke(234, 158, 36);
+  bezier(182, 177, 180, 190, 201, 190, 209, 202);
+  stroke(54, 234, 4);
+  bezier(195, 177, 205, 195, 201, 190, 195, 202);
+  
+  fill(201, 196, 189,165);
+  strokeWeight(1);
+  stroke(66, 164, 244);
+  rect(181, 175, 33, 30);
+  strokeWeight(3);
+  stroke(66, 164, 244);
+  line(181,177,214,177);
+  stroke(0,0,0,50);
+  line(181,206,214,206);
 }
 
 void body(){
