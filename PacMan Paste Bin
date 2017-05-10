@@ -1,21 +1,4 @@
 void keyPressed(){
-   if(inMenu){
-     if(keyCode == 40 && menuSelection < 2){
-       if(menuSelection > -1){
-         menuSelection++;
-        }
-     }
-     if(keyCode == 38){
-      if(menuSelection > 0 && menuSelection < 3){
-        menuSelection--;
-      }
-     }
-     if(keyCode == 32){
-       if(menuSelection == 0){
-         inMenu = false;
-        }
-     }
-  }else if(!isPaused){
     if(keyCode == 37 || keyCode == 38 || keyCode == 39 || keyCode == 40 || key == 'p'){
       if(keyCode == 40){
         arrows[0] = true;
@@ -48,3 +31,4 @@ void keyPressed(){
       }
       
   }
+//http://wallpapercave.com/wp/f2KTKjr.png
