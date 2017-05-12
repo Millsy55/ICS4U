@@ -1,0 +1,4 @@
+- Booleans for canMoveUp, canMoveDown etc. Place checks within keyPressed();
+- For loops looking in each direction for 10-ish pixels
+- Looking for the pacman blue (6, 37, 166) as opposed to the straight black (0,0,0);
+- 
