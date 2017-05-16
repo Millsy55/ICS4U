@@ -31,4 +31,17 @@ void keyPressed(){
       }
       
   }
+  
+  void startGame(){
+  background(0,0,0);
+  if(frameCount % 60 < 30){
+   transparency += 4; 
+  }else{
+   transparency -= 4; 
+  }
+  fill(255,255,255,transparency);
+  textAlign(CENTER);
+  textSize(16);
+  text("PRESS ANY KEY TO BEGIN", width/2, height/2-100);
+}
 //http://wallpapercave.com/wp/f2KTKjr.png
