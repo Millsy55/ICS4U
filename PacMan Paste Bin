@@ -44,4 +44,24 @@ void keyPressed(){
   textSize(16);
   text("PRESS ANY KEY TO BEGIN", width/2, height/2-100);
 }
+
+void overlay(){
+  //Level
+  //Requires Global int level
+  fill(255);
+  textAlign(LEFT);
+  textFont(arial);
+  textSize(12);
+  text(level +"UP", 2, 10);
+  //Score
+  //Requires Global int score
+  text(score, 2, 23);
+  //Lives Left
+  //Requires Global int livesLeft
+  fill(#ffee00);
+  for(int i = 0; i < livesLeft; i++){
+   arc(15+ (i*25), height - 12, 20,20, radians(35), radians(320)); 
+  }
+  
+}
 //http://wallpapercave.com/wp/f2KTKjr.png
