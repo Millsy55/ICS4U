@@ -64,4 +64,18 @@ void overlay(){
   }
   
 }
+
+void pausedGame(){
+  //background(0);
+  if(frameCount % 60 < 30){
+   transparency += 4; 
+  }else{
+   transparency -= 4; 
+  }
+  fill(255,255,255,transparency);
+  textAlign(CENTER);
+  textSize(16);
+  text("PAUSED, (PRESS SPACE TO RESUME", width/2, height/2-100);
+}
+
 //http://wallpapercave.com/wp/f2KTKjr.png
